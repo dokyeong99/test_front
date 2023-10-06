@@ -19,7 +19,7 @@ function App() {
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    fetch('http://localhost:8080/api/v1/user', {
+    fetch('http://35.238.173.75:8080/api/v1/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function App() {
   }, []);
 
   const fetchUserList = () => {
-    fetch('http://localhost:8080/api/v1/user')
+    fetch('http://35.238.173.75:8080/api/v1/user')
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);
